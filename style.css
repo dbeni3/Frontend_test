@@ -1,25 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     font-family: 'Quicksand', sans-serif;
     width: 100%;
 }
-
 .nav-container{
     background-color: #212121;
     height: 160px;
     width: 100vw;
 }
+.nav-left{
+    display: flex;
+    flex-direction: row;
+}
+.nav-right{
+    display: flex;
+    flex-direction: row;
+}
 
 .nav-section1{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .nav-items-left{
@@ -27,6 +33,16 @@ body{
 }
 .nav-items-left li{
     display: inline-block;
+}
+.nav-items-left li:not(:first-child){
+    margin-left: 30px;
+}
+.nav-items-left li a{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFF;
+    text-decoration: none;
 }
 
 .nav-items-right li{
@@ -44,4 +60,72 @@ body{
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
+}
+.nav-logo{
+    margin-top: 30px;
+    height: 45px;
+    margin-left: 45px;
+}
+.nav-logo a{
+   margin: auto;
+}
+.nav-search{
+    margin-top: 34px ;
+    height: 40px;
+    width: 240px;
+    border-bottom: 1px solid #5C5C5C;
+}
+.nav-search input{
+    margin-left: 5px;
+    border: none;
+    background-color: #212121;
+    width: 190px;
+    color: #767676;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+}
+.search-btn img{
+  padding: 10px 0 0 10px;
+}
+.nav-items-right{
+    margin-top: 40px;
+}
+.nav-items-right li{
+    margin-left: 50px;
+}
+.nav-items-right li:last-child{
+    margin-right: 50px;
+}
+.nav-section2{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: flex-end;
+    height: 85px;
+}
+.nav-items-center{
+    list-style-type:none;
+    margin-bottom: 16px;
+    width: 1300px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav-items-center li{
+    display: inline-block;
+}
+.nav-items-center li a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFF;
 }
