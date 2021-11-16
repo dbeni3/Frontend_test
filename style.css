@@ -124,8 +124,25 @@ body{
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    /* identical to box height */
     text-align: center;
     text-transform: uppercase;
     color: #FFFF;
+}
+
+.alony_sav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #F67DA1;
+}
+.alony_sav img {
+    margin-right: 20px;
 }
