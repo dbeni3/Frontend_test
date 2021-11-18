@@ -1,63 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend_teszt</title>
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="cross-axis"></div>
+
     <div class="nav-container">
-        <div class="wrapper">
-            <nav>
-                <div class="nav-section1">
-                    <div class="nav-left">
-                        <div class="nav-phone">
-                            09 87 654 3210
-                        </div>
-                        <ul class="nav-items-left">
-                            <li><a href="#">Kapcsolat</a></li>
-                            <li><a href="#">Rólunk</a></li>
-                            <li><a href="#">Fizetés, szállítás <img src="./assets/nyíl.svg"></a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-logo">
-                        <a href="#"><img src="./assets/logo.svg"></a>
-                    </div>
-                    <div class="nav-right">
-                        <div class="nav-search">
-                            <input type="text" placeholder="keresés..."/>
-                            <a href="#" class="search-btn"><img src="./assets/search.svg"> </a>
-                        </div>
-                        <ul class="nav-items-right">
-                            <li><a href="#"><img src="./assets/man.svg" ></a></li>
-                            <li><a href="#"><img src="./assets/heart.svg" ></a></li>
-                            <li><a href="#"><img src="./assets/bag.svg" ></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="nav-section2">
-                    <ul class="nav-items-center">
-                        <li><a href="#">ARCÁPOLÁS</a></li>
-                        <li><a href="#">TESTÁPOLÁS</a></li>
-                        <li><a href="#">HAJÁPOLÁS</a></li>
-                        <li><a href="#">SMINK</a></li>
-                        <li><a href="#">BŐRTÍPUSOK</a></li>
-                        <li><a href="#">ÚJDONSÁGOK</a></li>
-                        <li><a href="#">FÉRFIAKNAK</a></li>
-                        <li><a href="#">BABA-MAMA</a></li>
-                        <li><a href="#">AJÁNDÉK ÖTLETEK</a></li>
-                        <li><a href="#">MÁRKÁK</a></li>
-                        <li><a href="#">AKCIÓ</a></li>
-                    </ul>
-                </div>
-            </nav>
+      <nav>
+        <div class="nav-section1">
+          <div class="nav-left">
+            <div class="nav-phone">09 87 654 3210</div>
+            <ul class="nav-items-left">
+              <li><a href="#">Kapcsolat</a></li>
+              <li><a href="#">Rólunk</a></li>
+              <li>
+                <a href="#"
+                  >Fizetés, szállítás <img src="./assets/nyíl.svg"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-logo">
+            <a href="#"><img src="./assets/logo.svg" /></a>
+          </div>
+          <div class="nav-right">
+            <div class="nav-search">
+              <input type="text" placeholder="keresés..." />
+              <a href="#" class="search-btn"
+                ><img src="./assets/search.svg" />
+              </a>
+            </div>
+            <ul class="nav-items-right">
+              <li>
+                <a href="#"><img src="./assets/man.svg" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/heart.svg" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/bag.svg" /></a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="nav-section2">
+          <ul class="nav-items-center">
+            <li><a href="#">ARCÁPOLÁS</a></li>
+            <li><a href="#">TESTÁPOLÁS</a></li>
+            <li><a href="#">HAJÁPOLÁS</a></li>
+            <li><a href="#">SMINK</a></li>
+            <li><a href="#">BŐRTÍPUSOK</a></li>
+            <li><a href="#">ÚJDONSÁGOK</a></li>
+            <li><a href="#">FÉRFIAKNAK</a></li>
+            <li><a href="#">BABA-MAMA</a></li>
+            <li><a href="#">AJÁNDÉK ÖTLETEK</a></li>
+            <li><a href="#">MÁRKÁK</a></li>
+            <li><a href="#">AKCIÓ</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
     <div class="alony_sav">
-        <img src="./assets/flask.svg">
-        <p>kizárólag növényi eredetű alkotó elemek</p>
+      <img src="./assets/flask.svg" />
+      <p>kizárólag növényi eredetű alkotó elemek</p>
     </div>
-</body>
+    <div id="slider">
+      <div class="slide">
+        <input
+          type="radio"
+          name="radio-nutton"
+          id="radio1"
+          class="rd"
+          checked
+        />
+        <input type="radio" name="radio-nutton" id="radio2" class="rd" />
+        <input type="radio" name="radio-nutton" id="radio3" class="rd" />
+        <input type="radio" name="radio-nutton" id="radio4" class="rd" />
+        <input type="radio" name="radio-nutton" id="radio5" class="rd" />
+        <div class="arrow-next">
+          <button onclick="setNext()" id="next" class="arrow-button">
+            <img src="./assets/arrow.next.svg" alt="" />
+          </button>
+        </div>
+        <div class="arrow-prev">
+          <button onclick="setPrev()" id="prev" class="arrow-button">
+            <img src="./assets/arrow-prev.svg" alt="" />
+          </button>
+        </div>
+        <div class="content first">
+          <h2>LOREM</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <button>részletek</button>
+        </div>
+        <div class="content">
+          <h2>LOREM</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <button>részletek</button>
+        </div>
+        <div class="content">
+          <h2>LOREM</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <button>részletek</button>
+        </div>
+        <div class="content">
+          <h2>LOREM</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <button>részletek</button>
+        </div>
+        <div class="content">
+          <h2>LOREM</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <button>részletek</button>
+        </div>
+        <div class="nav-auto">
+          <div class="a-b1"></div>
+          <div class="a-b2"></div>
+          <div class="a-b3"></div>
+          <div class="a-b4"></div>
+          <div class="a-b5"></div>
+        </div>
+        <div class="nav-manual">
+          <label for="radio1" class="m-btn"></label>
+          <label for="radio2" class="m-btn"></label>
+          <label for="radio3" class="m-btn"></label>
+          <label for="radio4" class="m-btn"></label>
+          <label for="radio5" class="m-btn"></label>
+        </div>
+      </div>
+    </div>
+    <div class="mosaic">
+      <div class="mosaic-container">
+        <div class="mosaic-content1 h-text">
+          <h3>Heading</h3>
+        </div>
+        <div class="mosaic-content2 h-text">
+          <h3>Heading</h3>
+        </div>
+        <div class="mosaic-content3 h-text">
+          <h3>Heading</h3>
+        </div>
+        <div class="mosaic-content4 h-text">
+          <h3>Heading</h3>
+        </div>
+        <div class="mosaic-content5 h-text">
+          <h3>Heading</h3>
+        </div>
+        <div class="mosaic-content6 h-text">
+          <h3>Heading</h3>
+        </div>
+      </div>
+    </div>
+    <div class="discount-container">
+      <h2>akciós termékek</h2>
+      <div class="products-container">
+        <div class="product">
+          <img src="./assets/image 21.png" />
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore dolore magna aliqua incididunt
+            ut.
+          </p>
+          <div class="rating-stars"></div>
+          <div class="price"><span>12 300 Ft </span> 10 900 Ft</div>
+          <button class="product1-btn">KOSÁRBA</button>
+        </div>
+        <div class="product">
+          <img src="./assets/image 22.png" />
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore dolore magna aliqua incididunt
+            ut.
+          </p>
+          <div class="rating-stars"></div>
+          <div class="price"><span>12 300 Ft </span> 10 900 Ft</div>
+          <button class="product2-btn">KOSÁRBA</button>
+        </div>
+        <div class="product">
+          <img src="./assets/image 23.png" />
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore dolore magna aliqua incididunt
+            ut.
+          </p>
+          <div class="rating-stars"></div>
+          <div class="price"><span>12 300 Ft </span> 10 900 Ft</div>
+          <button class="product3-btn">KOSÁRBA</button>
+        </div>
+        <div class="product">
+          <img src="./assets/image 24.png" />
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore dolore magna aliqua incididunt
+            ut.
+          </p>
+          <div class="rating-stars"></div>
+          <div class="price"><span>12 300 Ft </span> 10 900 Ft</div>
+          <button class="product4-btn">KOSÁRBA</button>
+        </div>
+      </div>
+      <button class="all-discount-btn">Összes akciós termék</button>
+    </div>
+    <div class="vdinamic-container">
+      <div id="bg" class="vdinamic-content">
+        <div class="layer">
+          <h2>a természetes szépségért</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+          <button>megnézem</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container">
+      <div class="footer-wrap">
+        <div class="footer-content1">
+          <ul class="footer-items">
+            <li><a href="#">Kapcsolat</a></li>
+            <li><a href="#">Akciós termékek</a></li>
+            <li><a href="#">Adatvédelmi nyilatkozat</a></li>
+            <li><a href="#">Vásárlási feltételek</a></li>
+            <li><a href="#">Fizetés, szállítás</a></li>
+            <li><a href="#">Adatvédelem</a></li>
+            <li><a href="#">Segítség</a></li>
+            <li><a href="#">Rólunk</a></li>
+          </ul>
+        </div>
+        <div class="footer-content2">
+          <ul class="footer-items">
+            <li>4028 Debrecen, Kassai út 129</li>
+            <li>info@shoprenter.hu</li>
+            <li>+36-1/234-5012</li>
+            <li>Nyitvatartás: h-p 9-17</li>
+          </ul>
+        </div>
+        <div class="social">
+          <img src="./assets/fb.svg">
+          <img src="./assets/ig.svg">
+          <img src="./assets/yt.svg">
+          <img src="./assets/msg.svg">
+          <img src="./assets/tw.svg">
+        </div>
+        <div class="centering">
+          <p class="copyright">© 2021 Teszts téma</p>
+        </div>
+        <div class="lang"></div>
+        <div class="centering">
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+            sed quia non numquam eius modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+            aliquid ex ea commodi consequatur? Quis autem vel eum iure
+            reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+            consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+            pariatur?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="szallfiz">
+      <a style="margin-right: 30.89px;" href="#"><img src="./assets/gls.png"></a>
+      <a style="margin-right: 33.39px;" href="#"><img src="./assets/dpd.png"></a>
+      <a style="margin-right: 30.05px;" href="#"><img src="./assets/pp.png"></a>
+      <a style="margin-right: 20.87px;" href="#"><img src="./assets/mc.png"></a>
+      <a style="margin-right: 30.89px;" href="#"><img src="./assets/ma.png"></a>
+      <a style="margin-right: 33.39px;" href="#"><img src="./assets/badge.png"></a>
+      <a href="#"><img src="./assets/aru.png"></a>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
