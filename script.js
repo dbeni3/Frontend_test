@@ -32,8 +32,5 @@ var i=0;
 setInterval(()=>{ 
     var url=["image\ 36.png","image\ 37.png","image\ 38.png"];
     document.getElementById("bg").style.backgroundImage= `url('./assets/${url[i]}')`;
-    i++;
-    if(i>url.length-1){
-        i=0;
-    }
- }, 5000);
+    i==2 ? i=0 : i++;
+ }, 7000);
