@@ -108,6 +108,8 @@ body {
   padding: 10px 0 0 10px;
 }
 .nav-items-right {
+  display: flex;
+  flex-direction: row;
   margin-top: 40px;
 }
 .nav-items-right li {
@@ -193,7 +195,7 @@ body {
   background-color: #fee1e6;
   background-image: url("./assets/rose.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-position: right;
   height: 700px;
   width: 20%;
   transition: 1s;
@@ -360,6 +362,7 @@ body {
 }
 .mosaic-content2 {
   background-image: url("./assets/smallban2.png");
+  background-position: right;
   color: #fff;
   grid-area: smallban2;
   background-repeat: no-repeat;
@@ -415,7 +418,7 @@ body {
 .discount-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 146px;
 }
 .discount-container h2 {
@@ -428,15 +431,23 @@ body {
   text-transform: uppercase;
   color: #212121;
 }
-.products-container {
-  margin: 78px 70px 0 70px;
+.wrap-two{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.products-container {
+  margin: 48px 10px 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .product {
   width: 400px;
+  padding-left:30px;
+  padding-right: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
