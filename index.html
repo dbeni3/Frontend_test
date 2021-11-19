@@ -20,9 +20,16 @@
               <li><a href="#">Kapcsolat</a></li>
               <li><a href="#">Rólunk</a></li>
               <li>
-                <a href="#"
-                  >Fizetés, szállítás <img src="./assets/nyíl.svg"
-                /></a>
+                <div class="dropdown">
+                  <a class="dropdown-btn" href="#"
+                    >Fizetés, szállítás <img src="./assets/nyíl.svg"
+                  /></a>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -99,7 +106,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <button>részletek</button>
+          <button>részletek<img src="./assets/btn-arrow.svg" /></button>
         </div>
         <div class="content">
           <h2>LOREM</h2>
@@ -107,7 +114,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <button>részletek</button>
+          <button>részletek<img src="./assets/btn-arrow.svg" /></button>
         </div>
         <div class="content">
           <h2>LOREM</h2>
@@ -115,7 +122,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <button>részletek</button>
+          <button>részletek<img src="./assets/btn-arrow.svg" /></button>
         </div>
         <div class="content">
           <h2>LOREM</h2>
@@ -123,7 +130,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <button>részletek</button>
+          <button>részletek<img src="./assets/btn-arrow.svg" /></button>
         </div>
         <div class="content">
           <h2>LOREM</h2>
@@ -131,7 +138,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
-          <button>részletek</button>
+          <button>részletek<img src="./assets/btn-arrow.svg" /></button>>
         </div>
         <div class="nav-auto">
           <div class="a-b1"></div>
@@ -211,7 +218,11 @@
           <button class="product3-btn">KOSÁRBA</button>
         </div>
         <div class="product">
-          <img src="./assets/image 24.png" />
+          <div class="product-img">
+            <img src="./assets/image 24.png" />
+            <img src="./assets/Rectangle.svg" />
+            <img src="./assets/heart-s.svg" />
+          </div>
           <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -223,7 +234,9 @@
           <button class="product4-btn">KOSÁRBA</button>
         </div>
       </div>
-      <button class="all-discount-btn">Összes akciós termék</button>
+      <button class="all-discount-btn">
+        Összes akciós termék<img src="./assets/btn-black.svg" />
+      </button>
     </div>
     <div class="vdinamic-container">
       <div id="bg" class="vdinamic-content">
@@ -233,7 +246,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor
           </p>
-          <button>megnézem</button>
+          <button>megnézem<img src="./assets/btn-arrow.svg" /></button>
         </div>
       </div>
     </div>
@@ -260,16 +273,20 @@
           </ul>
         </div>
         <div class="social">
-          <img src="./assets/fb.svg">
-          <img src="./assets/ig.svg">
-          <img src="./assets/yt.svg">
-          <img src="./assets/msg.svg">
-          <img src="./assets/tw.svg">
+          <img src="./assets/fb.svg" />
+          <img src="./assets/ig.svg" />
+          <img src="./assets/yt.svg" />
+          <img src="./assets/msg.svg" />
+          <img src="./assets/tw.svg" />
         </div>
         <div class="centering">
           <p class="copyright">© 2021 Teszts téma</p>
         </div>
-        <div class="lang"></div>
+        <div class="lang">
+          <ul>
+            <li></li>
+          </ul>
+        </div>
         <div class="centering">
           <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -291,13 +308,25 @@
       </div>
     </div>
     <div class="szallfiz">
-      <a style="margin-right: 30.89px;" href="#"><img src="./assets/gls.png"></a>
-      <a style="margin-right: 33.39px;" href="#"><img src="./assets/dpd.png"></a>
-      <a style="margin-right: 30.05px;" href="#"><img src="./assets/pp.png"></a>
-      <a style="margin-right: 20.87px;" href="#"><img src="./assets/mc.png"></a>
-      <a style="margin-right: 30.89px;" href="#"><img src="./assets/ma.png"></a>
-      <a style="margin-right: 33.39px;" href="#"><img src="./assets/badge.png"></a>
-      <a href="#"><img src="./assets/aru.png"></a>
+      <a style="margin-right: 30.89px" href="#"
+        ><img src="./assets/gls.png"
+      /></a>
+      <a style="margin-right: 33.39px" href="#"
+        ><img src="./assets/dpd.png"
+      /></a>
+      <a style="margin-right: 30.05px" href="#"
+        ><img src="./assets/pp.png"
+      /></a>
+      <a style="margin-right: 20.87px" href="#"
+        ><img src="./assets/mc.png"
+      /></a>
+      <a style="margin-right: 30.89px" href="#"
+        ><img src="./assets/ma.png"
+      /></a>
+      <a style="margin-right: 33.39px" href="#"
+        ><img src="./assets/badge.png"
+      /></a>
+      <a href="#"><img src="./assets/aru.png" /></a>
     </div>
     <script src="script.js"></script>
   </body>
