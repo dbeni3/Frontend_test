@@ -19,7 +19,8 @@ body {
 }
 .nav-container {
   background-color: #212121;
-  height: 160px;
+  min-height: 160px;
+  height: auto;
 }
 .nav-left {
   display: -webkit-box;
@@ -41,6 +42,7 @@ body {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
+  
 }
 .nav-items-left li a:hover {
   color: rgba(255, 255, 255, 0.8);
@@ -52,9 +54,39 @@ body {
 .nav-section1 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 2fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 2fr;
   height: 120px;
+}
+@media screen and (max-width: 1300px) {
+  .nav-section1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns:1fr;
+    grid-template-columns: 1fr;
+    height: 120px;
+  }
+  .nav-section1{
+    height: auto;
+  }
+  .nav-search{
+    width: 140px !important;
+  }
+  .nav-search input {
+    width: 90px !important;
+  }
+  .nav-items-left li:not(:first-child) {
+    padding-left: 5px !important;
+  }
+  .nav-items-left li:not(:last-child) {
+    padding-right: 5px !important;
+  }
+  .nav-items-center li {
+    margin: 30px 5px 0 5px !important;
+  }
+  .nav-items-right li {
+    margin:0 10px 0 10px !important;
+  }
 }
 
 .nav-items-left {
@@ -79,7 +111,9 @@ body {
 
 .nav-items-right li {
   display: inline-block;
+  margin-left: 50px;
 }
+
 .nav-phone {
   margin-top: 44px;
   margin-left: 50px;
@@ -133,13 +167,12 @@ body {
   flex-direction: row;
   margin-top: 40px;
 }
-.nav-items-right li {
-  margin-left: 50px;
-}
+
 .nav-items-right li:last-child {
   margin-right: 50px;
 }
 .nav-section2 {
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,13 +186,15 @@ body {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  height: 40px;
+  flex-wrap: wrap;
+  min-height: 40px;
 }
 .nav-items-center {
   list-style-type: none;
   margin-bottom: 16px;
   width: 1300px;
-  height: 20px;
+  min-height: 20px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,6 +205,7 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .nav-items-center li {
   display: inline-block;
@@ -334,6 +370,36 @@ body {
   width: 18px;
   height: 30px;
 }
+@media screen and (max-width: 800px) {
+  .content h2 {
+    font-size: 100px !important;
+    line-height: 100px !important;
+    margin-top: 200px !important;
+    margin-left: 100px !important;
+  }
+  .content p {
+    max-width: 300px!important;
+    margin-left: 100px!important;
+  }
+  .content button {
+    margin-left: 100px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content h2 {
+    font-size: 70px !important;
+    line-height: 70px !important;
+    margin-top: 100px !important;
+    margin-left: 50px !important;
+  }
+  .content p {
+    max-width: 270px!important;
+    margin-left: 50px!important;
+  }
+  .content button {
+    margin-left: 50px !important;
+  }
+}
 .content h2 {
   font-weight: bold;
   font-size: 130px;
@@ -344,7 +410,7 @@ body {
   margin-left: 176px;
 }
 .content p {
-  width: 580px;
+  max-width: 580px;
   margin-left: 184px;
   margin-top: 17px;
   font-weight: normal;
@@ -394,6 +460,42 @@ body {
     "bigban1 bigban1 smallban2 smallban3"
     "smallban4 smallban5 bigban6 bigban6";
   gap: 20px 20px;
+}
+@media screen and (max-width: 1000px) {
+  .mosaic-container {
+    height: 1640px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "bigban1 bigban1"
+       "smallban2 smallban3"
+      "smallban4 smallban5 "
+      "bigban6 bigban6";
+    gap: 20px 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mosaic-container {
+    height: 1640px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "bigban1 bigban1"
+       "smallban2 smallban2"
+       "smallban3 smallban3"
+       "smallban4 smallban4 "
+      "smallban5 smallban5 "
+      "bigban6 bigban6";
+    gap: 20px 20px;
+  }
 }
 
 .h-text {
@@ -481,6 +583,7 @@ body {
   margin-right: 40px;
 }
 
+
 .discount-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -511,7 +614,10 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  justify-content: center;
   margin-top: 30px;
+  flex-wrap: wrap;
+
 }
 
 .products-container {
@@ -579,6 +685,12 @@ body {
 }
 .product button:hover {
   background-color: rgba(33, 33, 33, 0.9);
+}
+@media screen and (max-width: 500px) {
+  .product {
+    width: 300px !important;
+    padding: 20px 10px 0 10px !important;
+  }
 }
 .price span {
   font-size: 14px;
@@ -687,7 +799,8 @@ body {
 .footer-container {
   margin-top: 100px;
   background: #212121;
-  height: 460px;
+  min-height: 460px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -700,7 +813,8 @@ body {
   justify-content: center;
 }
 .footer-wrap {
-  height: 460px;
+  min-height: 460px;
+  height: auto;
 }
 .footer-content1 {
   height: 17px;
@@ -711,6 +825,7 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .footer-items {
   list-style-type: none;
@@ -723,6 +838,22 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (max-width: 1150px) {
+ .footer-items li{
+   margin: 30px 5px 0 5px;
+ }
+ .footer-content1{
+   height: auto !important;
+ }
+ .footer-content2{
+  height: auto !important ;
+}
+ .footer-items{
+   height: auto !important;
+ }
 }
 .footer-items li {
   font-weight: 500;
@@ -804,7 +935,8 @@ body {
   margin-right: 30px;
 }
 .szallfiz {
-  height: 80px;
+  min-height: 80px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,6 +946,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .dropbtn {
