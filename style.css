@@ -59,21 +59,20 @@ body {
   height: 120px;
 }
 @media screen and (max-width: 1300px) {
-  .nav-section1 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns:1fr;
-    grid-template-columns: 1fr;
-    height: 120px;
-  }
   .nav-section1{
-    height: auto;
+    height: auto !important;
   }
   .nav-search{
     width: 140px !important;
   }
   .nav-search input {
     width: 90px !important;
+  }
+  .nav-items-left{
+    margin-left: 20px !important;
+  }
+  .nav-phone{
+    margin-left: 20px !important;
   }
   .nav-items-left li:not(:first-child) {
     padding-left: 5px !important;
@@ -88,6 +87,27 @@ body {
     margin:0 10px 0 10px !important;
   }
 }
+@media screen and (max-width: 1000px) {
+.nav-section1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns:1fr;
+  grid-template-columns: 1fr;
+}
+.nav-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.nav-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+}
+
 
 .nav-items-left {
   list-style-type: none;
