@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  /*outline: 1px solid red;*/
 }
 a {
   text-decoration: none;
@@ -12,6 +13,9 @@ body {
   font-style: normal;
   margin: 0;
   padding: 0;
+}
+button{
+  cursor:pointer;
 }
 .nav-hb-wrapper {
   position: absolute;
@@ -25,7 +29,6 @@ body {
 .nav-hamburger-button {
   width: 2.5rem;
   height: 2.5rem;
-  border: 2px solid #f67da1;
   border-radius: 5px;
   margin: 1rem;
   display: flex;
@@ -111,7 +114,6 @@ body {
   color: #ffff;
   text-decoration: none;
 }
-
 .nav-phone {
   margin-top: 44px;
   margin-left: 49px;
@@ -143,6 +145,7 @@ body {
   display: block;
 }
 .nav-search {
+  display: flex;
   margin: 34px 15px 0 0;
   height: 40px;
   width: 240px;
@@ -152,7 +155,8 @@ body {
   margin-left: 5px;
   border: none;
   background-color: #212121;
-  width: 190px;
+  width: 100%;
+
   height: 30px;
   color: #767676;
   font-weight: 500;
@@ -213,7 +217,6 @@ body {
 .nav-items-center {
   list-style-type: none;
   margin: 0 10px 16px 10px;
-
   width: 1300px;
   min-height: 20px;
   height: auto;
@@ -274,7 +277,7 @@ body {
   background-color: #fee1e6;
   background-image: url("./assets/rose.png");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   height: 700px !important;
   -webkit-transition: 1s;
   -o-transition: 1s;
@@ -283,8 +286,8 @@ body {
 .next-Arrow {
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: calc(50% - 30px /2);
+  /*transform: translate(0, -50%);*/
 }
 .slick-arrow {
   width: 18px;
@@ -409,7 +412,7 @@ body {
   -ms-grid-column-span: 3;
   grid-area: bigban1;
   background-image: url("./assets/bigban1.jpg");
-  background-repeat: no-repeat;
+  background-size: cover;
 }
 .mosaic-content1 h3 {
   padding-top: 47px;
@@ -422,6 +425,7 @@ body {
   background-position: right;
   grid-area: smallban2;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .mosaic-content2 h3 {
   padding-top: 47px;
@@ -434,6 +438,7 @@ body {
   background-image: url("./assets/smallban3.jpg");
   grid-area: smallban3;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .mosaic-content3 h3 {
   float: right;
@@ -447,6 +452,7 @@ body {
   background-image: url("./assets/smallban4.jpg");
   grid-area: smallban4;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .mosaic-content4 h3 {
   padding-top: 47px;
@@ -456,7 +462,7 @@ body {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
   background-image: url("./assets/smallban5.jpg");
-
+  background-size: cover;
   grid-area: smallban5;
   background-repeat: no-repeat;
 }
@@ -470,7 +476,7 @@ body {
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
   background-image: url("./assets/bigban6.jpg");
-
+  background-size: cover;
   grid-area: bigban6;
   background-repeat: no-repeat;
 }
@@ -859,6 +865,9 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+.szallfiz a {
+  margin: 0 20px ;
+}
 .dropbtn {
   color: white;
   padding: 16px;
@@ -1013,6 +1022,18 @@ body {
   display: block;
 }
 
+@media (max-width: 1860px) {
+  /*Mosaic*/
+    .mosaic-container{
+      width: 1120px;
+      height: 550px;;
+    }
+    /*vdinamic*/
+    .vdinamic-content{
+      width: 1120px;
+    }
+}
+
 @media (max-width: 1200px) {
   /* Nav section */
   .nav-container {
@@ -1023,8 +1044,8 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .nav-left {
-    display: none;
+  .nav-phone {
+    display: none;;
   }
   .nav-items-center {
     margin-top: 20px;
@@ -1042,7 +1063,11 @@ body {
     display: flex;
     justify-content: space-between;
   }
+  .nav-left{
+    order: 2;
+  }
   .nav-right {
+    order:3;
     justify-content: center;
   }
   .nav-items-right {
@@ -1051,6 +1076,12 @@ body {
   .nav-section2 {
     display: none;
   }
+  .nav-search{
+    margin-left: 20px;
+    margin-right:20px;
+    width: 100%;
+  }
+ 
   /* Slider */
   .content h2 {
     font-size: 5rem;
@@ -1072,14 +1103,13 @@ body {
     height: 50px;
   }
   /* Mosaic */
-  .h-text {
-    font-weight: 400;
+  .h-text a h3 {
     font-size: 1.875rem;
-    line-height: 3rem;
-    text-transform: uppercase;
+    padding: 20px;
   }
-  .mosaic-container {
-    height: 620px;
+  .mosaic-container{
+    width: 920px;
+    height: 430px;
   }
   /* Products*/
   /* Footer*/
@@ -1095,26 +1125,22 @@ body {
     text-align: center;
     padding: 20px;
   }
+  /*vdinamic*/
+  .vdinamic-content{
+    width: 920px;
+  }
 }
 @media (max-width: 992px) {
   /* Mosaic */
-  .mosaic-container {
-    height: 1640px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 20px 1fr 20px;
-    grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "bigban1 bigban1"
-      "smallban2 smallban3"
-      "smallban4 smallban5 "
-      "bigban6 bigban6";
-    gap: 20px 20px;
+  .mosaic-container{
+    width: 720px;
+    height: 330px;
   }
   .h-text {
     background-position: center;
+  }
+  .h-text a h3{
+  font-size: 1.5625rem;
   }
   /*Product*/
   .products-container {
@@ -1123,6 +1149,10 @@ body {
   .wrap-two .product:last-child {
     margin-top: 30px;
   }
+    /*vdinamic*/
+    .vdinamic-content{
+      width: 720px;
+    }
 }
 @media (max-width: 768px) {
   /*Nav*/
@@ -1147,30 +1177,26 @@ body {
     height: 50px;
   }
   /* Mosaic */
-  .h-text {
-    font-weight: 400;
-    font-size: 1.875rem;
-    line-height: 3rem;
-    text-transform: uppercase;
+  .h-text a h3 {
+    font-size: 1.25rem;
+    padding: 10px;
   }
   .mosaic-container {
+    width: 540px;;
     height: 620px;
   }
   .mosaic-container {
-    height: 1640px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr 20px;
-    grid-template-columns: repeat(1, 430px);
+    grid-template-columns: repeat(2, 265px);
     -ms-grid-rows: auto;
     grid-template-rows: auto;
     grid-template-areas:
-      "bigban1 "
-      "smallban2 "
-      "smallban3"
-      "smallban4  "
-      "smallban5"
-      "bigban6";
+      "bigban1 bigban1"
+      "smallban2 smallban3 "
+      "smallban4 smallban5 "
+      "bigban6 bigban6";
     gap: 20px 20px;
     justify-content: center;
   }
@@ -1179,12 +1205,12 @@ body {
   }
   /*Product*/
   .product {
-    width: 300px;
+    width: 330px;
     padding: 20px 10px 0 10px;
   }
 
   .main-product-image {
-    width: 300px;
+    width: 330px;
     height: auto;
   }
   /*Termeszetes szépségért*/
@@ -1203,8 +1229,8 @@ body {
   }
   /*Vdinamic*/
   .vdinamic-content {
-    width: 100vw;
-    height: 400px;
+    width: 540px;
+    
   }
 }
 @media (max-width: 576px) {
@@ -1217,17 +1243,32 @@ body {
   .nav-hb-wrapper {
     left: 20px;
   }
-  .nav-hamburger-button {
-    width: 2rem;
-    height: 2rem;
+  .nav-hamburger-button{
+    margin-left:0;
   }
+
   .nav-hamburger-button div {
     width: 1.25rem;
   }
-  /* Mosaic */
-  .mosaic-container {
-    grid-template-columns: repeat(1, 340px);
-    gap: 15px 15px;
+  .nav-search{
+    width: 90%;
   }
+  /* Mosaic */
+.mosaic-container {
+  grid-template-columns: repeat(2, 40vw);
+  max-width: 550px;
+  width: auto;
+  padding: 20px;
+}
+  
   /*Product*/
+  .product {
+    width: 300px;
+    padding: 20px 10px 0 10px;
+  }
+
+  .main-product-image {
+    width: 300px;
+    height: auto;
+  }
 }

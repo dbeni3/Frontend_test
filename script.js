@@ -8,7 +8,8 @@ $('.slick-slider').slick({
     prevArrow: '<span class="prev-Arrow"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5704 30L18 27.5704L5.43826 15L18 2.42964L15.5704 0L0.561747 15L15.5704 30Z" fill="#212121" /></svg></span>',
     nextArrow: ' <span class="next-Arrow"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.42964 30L0 27.5704L12.5617 15L0 2.42964L2.42964 0L17.4383 15L2.42964 30Z" fill="#212121"/></svg></span>'
 });
-function myFunction() {
+
+function mobileNavToggle() {
     var x = document.getElementById("mobile-links");
     if (x.style.display === "block") {
       x.style.display = "none";
@@ -17,6 +18,7 @@ function myFunction() {
     }
   }
 
+  
 var i = 0;
 setInterval(() => {
     var url = ["image36.jpg", "image37.jpg", "image38.jpg"];
