@@ -18,10 +18,3 @@ function mobileNavToggle() {
     }
   }
 
-  
-var i = 0;
-setInterval(() => {
-    var url = ["image36.jpg", "image37.jpg", "image38.jpg"];
-    document.getElementById("bg").style.backgroundImage = `url('./assets/${url[i]}')`;
-    i == 2 ? i = 0 : i++;
-}, 7000);

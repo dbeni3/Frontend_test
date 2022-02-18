@@ -661,12 +661,17 @@ button{
   margin-right: 70px;
   width: 100vw;
   height: 500px;
-  background-image: url("./assets/image36.jpg");
+  overflow: hidden;
 
-  background-repeat: no-repeat;
-  background-position: center;
+}
+.vdinamic-content .layer iframe{
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  z-index: -1;
 }
 .layer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -682,7 +687,7 @@ button{
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(246, 125, 161, 0.9);
+  background-color: rgba(246, 125, 161, 0.8);
 }
 .layer button:hover {
   background-color: rgba(33, 33, 33, 0.9);
@@ -1129,6 +1134,11 @@ button{
   .vdinamic-content{
     width: 920px;
   }
+  .vdinamic-content .layer iframe{
+    height: 100%;
+    width: 150%;
+  }
+  
 }
 @media (max-width: 992px) {
   /* Mosaic */
@@ -1230,7 +1240,9 @@ button{
   /*Vdinamic*/
   .vdinamic-content {
     width: 540px;
-    
+  }
+  .vdinamic-content .layer iframe{
+    width: 250%;
   }
 }
 @media (max-width: 576px) {
@@ -1270,5 +1282,9 @@ button{
   .main-product-image {
     width: 300px;
     height: auto;
+  }
+  /*vdinamic*/
+  .vdinamic-content .layer iframe{
+    width: 350%;
   }
 }
